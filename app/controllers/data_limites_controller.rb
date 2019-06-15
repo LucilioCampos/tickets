@@ -46,6 +46,6 @@ class DataLimitesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def data_limite_params
-      params.require(:data_limite).permit(:timestamp, :formatedd, :string,, :cor, :descricao)
+      params.require(:data_limite).permit(:timestamp, :formatedd, :string, :cor, :descricao)
     end
 end
