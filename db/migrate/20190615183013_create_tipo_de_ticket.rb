@@ -1,6 +1,6 @@
-class CreateTipoDeTickets < ActiveRecord::Migration[5.2]
+class CreateTipoDeTicket < ActiveRecord::Migration[5.2]
   def change
-    create_table :tipo_de_tickets do |t|
+    create_table :tipoDeTicket do |t|
       t.integer :tipoDeTicketKey
       t.string :descricao
       t.string :cor

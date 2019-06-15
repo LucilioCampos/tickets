@@ -3,13 +3,13 @@
 one:
   timestamp: 1
   formatedd: MyString
-  string,: MyString
+  string: MyString
   cor: MyString
   descricao: MyString
 
 two:
   timestamp: 1
   formatedd: MyString
-  string,: MyString
+  string: MyString
   cor: MyString
   descricao: MyString

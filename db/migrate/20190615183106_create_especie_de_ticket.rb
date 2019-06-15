@@ -1,6 +1,6 @@
-class CreateEspecieDeTickets < ActiveRecord::Migration[5.2]
+class CreateEspecieDeTicket < ActiveRecord::Migration[5.2]
   def change
-    create_table :especie_de_tickets do |t|
+    create_table :especieDeTicket do |t|
       t.integer :especieDeTicketKey
       t.string :descricao
       t.string :slug

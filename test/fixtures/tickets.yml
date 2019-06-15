@@ -1,14 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ticketKey: MyString
-  quantidadeDeVinculado: 1
+  ticketKey: 1
+  quantidadeDeVinculados: one
   titulo: MyString
-  categoriaKey: one
-  tipoDeTicketKey: one
-  kanbanStatusKey: one
-  tipoDePrioridadeKey: one
-  especieDeTicketKey: MyString
+  categoria: one
+  tipoDeTicket: one
+  kanbanStatus: one
+  tipoDePrioridade: one
+  especieDeTicket: MyString
   references: MyString
   alvoDeSpam: false
   valorDeNegocio: MyString
@@ -20,17 +20,16 @@ one:
   dataLimite: MyString
   references: MyString
   url: MyString
-  user: one
 
 two:
-  ticketKey: MyString
-  quantidadeDeVinculado: 1
+  ticketKey: 1
+  quantidadeDeVinculados: two
   titulo: MyString
-  categoriaKey: two
-  tipoDeTicketKey: two
-  kanbanStatusKey: two
-  tipoDePrioridadeKey: two
-  especieDeTicketKey: MyString
+  categoria: two
+  tipoDeTicket: two
+  kanbanStatus: two
+  tipoDePrioridade: two
+  especieDeTicket: MyString
   references: MyString
   alvoDeSpam: false
   valorDeNegocio: MyString
@@ -42,4 +41,3 @@ two:
   dataLimite: MyString
   references: MyString
   url: MyString
-  user: two

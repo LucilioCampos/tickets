@@ -1,51 +1,52 @@
 class TicketsController < ApplicationController
-  before_action :set_ticket, only: [:show, :update, :destroy]
 
-  # GET /tickets
   def index
-    @tickets = Ticket.all
-
-    render json: @tickets
+    tickets = Ticket.order('created_at DESC')
+    render json: {status: 'SUCCESS', message: 'Artigos carregados', data: tickets},status: :ok
   end
 
-  # GET /tickets/1
+  # Listar artigo passando ID
   def show
-    render json: @ticket
+    ticket = Ticket.find(params[:id])
+    render json: {status: 'SUCCESS', message:'Loaded article', data:ticket}, status: :ok
   end
 
-  # POST /tickets
+  # Criar um novo artigo
   def create
     @ticket = Ticket.new(ticket_params)
-
     if @ticket.save
-      render json: @ticket, status: :created, location: @ticket
+      render json: { status: 'SUCCESS', message: 'Saved article', data: @ticket }, status: :ok
     else
-      render json: @ticket.errors, status: :unprocessable_entity
+      render json: { status: 'ERROR', message: 'Articles not saved' }, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /tickets/1
-  def update
-    if @ticket.update(ticket_params)
-      render json: @ticket
-    else
-      render json: @ticket.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /tickets/1
+  # Excluir artigo
   def destroy
-    @ticket.destroy
+    ticket = Ticket.find(params[:id])
+    ticket.destroy
+    render json: {status: 'SUCCESS', message:'Deleted article', data: ticket}, status: :ok
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_ticket
-      @ticket = Ticket.find(params[:id])
+  # Atualizar um artigo
+  def update
+    @ticket = Ticket.find(params[:id])
+    if @ticket.update(ticket_params)
+      render json: { status: 'SUCCESS', message: 'Updated article', data: @ticket }, status: :ok
+    else
+      render json: { status: 'ERROR', message: 'Articles not update' }, status: :unprocessable_entity
     end
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def ticket_params
-      params.require(:ticket).permit(:ticketKey, :quantidadeDeVinculado, :titulo, :categoriaKey_id, :tipoDeTicketKey_id, :kanbanStatusKey_id, :tipoDePrioridadeKey_id, :especieDeTicketKey, :references, :alvoDeSpam, :valorDeNegocio, :integer, :esforco, :projeto_id, :responsavel_id, :atuacoes_id, :dataLimite, :references, :url, :user_id)
-    end
+  # Parametros aceitos
+  private
+
+  def ticket_params
+    params.require(:ticket).permit( :ticketKey, :quantidadeDeVinculados, :titulo,
+                                    :categoria_id, :tipoDeTicket_id, :kanbanStatus,
+                                    :tipoDePrioridade, :especieDeTicket, :alvoDeSpam,
+                                    :valorDeNegocio, :integer, :esforco, :projeto,
+                                    :responsavel, :atuacao, :dataLimite, :url)
+  end
+
 end

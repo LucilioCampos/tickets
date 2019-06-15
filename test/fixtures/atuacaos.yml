@@ -3,9 +3,9 @@
 one:
   atuacaoKey: 1
   ativo: false
-  usuario: one
+  usuario: 1
 
 two:
   atuacaoKey: 1
   ativo: false
-  usuario: two
+  usuario: 1

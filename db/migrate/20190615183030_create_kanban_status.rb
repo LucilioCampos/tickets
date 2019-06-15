@@ -1,6 +1,6 @@
-class CreateKanbanStatuses < ActiveRecord::Migration[5.2]
+class CreateKanbanStatus < ActiveRecord::Migration[5.2]
   def change
-    create_table :kanban_statuses do |t|
+    create_table :kanbanStatus do |t|
       t.integer :kanbanStatusKey
       t.string :descricao
       t.boolean :fim
