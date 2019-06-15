@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kanbanStatusKey: 1
+  descricao: MyString
+  fim: false
+  ordem: 1
+
+two:
+  kanbanStatusKey: 1
+  descricao: MyString
+  fim: false
+  ordem: 1

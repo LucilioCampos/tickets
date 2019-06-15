@@ -1,0 +1,2 @@
+class DataLimite < ApplicationRecord
+end

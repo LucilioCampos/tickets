@@ -1,0 +1,2 @@
+class Resposavel < ApplicationRecord
+end

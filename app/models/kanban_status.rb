@@ -1,0 +1,2 @@
+class KanbanStatus < ApplicationRecord
+end

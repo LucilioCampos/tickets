@@ -1,0 +1,2 @@
+class TipoDeTicket < ApplicationRecord
+end

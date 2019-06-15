@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipoDePrioridadeKey: 1
+  descricao: MyString
+  cor: MyString
+  peso: 1
+
+two:
+  tipoDePrioridadeKey: 1
+  descricao: MyString
+  cor: MyString
+  peso: 1

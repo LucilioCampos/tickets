@@ -1,0 +1,2 @@
+class EspecieDeTicket < ApplicationRecord
+end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  especieDeTicketKey: 1
+  descricao: MyString
+  slug: MyString
+
+two:
+  especieDeTicketKey: 1
+  descricao: MyString
+  slug: MyString
